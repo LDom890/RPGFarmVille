@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     new Rigidbody2D rigidbody2D;
 
@@ -20,9 +20,9 @@ public class MovementController : MonoBehaviour
         float ver = Input.GetAxisRaw("Vertical");
 
 
-        if (hor !=0 || ver !=0 )
+        if (hor != 0 || ver != 0)
         {
-            Vector2 velocity = new Vector2(hor, ver) * speed;
+            Vector2 velocity = new Vector2(hor, ver).normalized * speed;
 
             rigidbody2D.velocity = velocity;
 
