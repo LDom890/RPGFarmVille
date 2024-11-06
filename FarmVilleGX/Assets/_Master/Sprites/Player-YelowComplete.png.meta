@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_1WalkD_0
+      name: Player-YelowComplete_1WalkSD_0
       rect:
         serializedVersion: 2
         x: 16
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_2
+      name: Player-YelowComplete_2WalkD_0
       rect:
         serializedVersion: 2
         x: 32
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_3
+      name: Player-YelowComplete_3WalkWD_0
       rect:
         serializedVersion: 2
         x: 48
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_6WalkD_1
+      name: Player-YelowComplete_6WalkSD_1
       rect:
         serializedVersion: 2
         x: 16
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_7
+      name: Player-YelowComplete_7WalkD_1
       rect:
         serializedVersion: 2
         x: 32
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_8
+      name: Player-YelowComplete_8WalkWD_1
       rect:
         serializedVersion: 2
         x: 48
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_11WalkD_3
+      name: Player-YelowComplete_11WalkSD_3
       rect:
         serializedVersion: 2
         x: 16
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_12
+      name: Player-YelowComplete_12WalkD_2
       rect:
         serializedVersion: 2
         x: 32
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-YelowComplete_13
+      name: Player-YelowComplete_13WalkWD_2
       rect:
         serializedVersion: 2
         x: 48
@@ -450,18 +450,18 @@ TextureImporter:
     nameFileIdTable:
       Player-YelowComplete_0WalkS_0: 744219254
       Player-YelowComplete_10WalkS_2: -942982835
-      Player-YelowComplete_11WalkD_3: 1668682408
-      Player-YelowComplete_12: 611496283
-      Player-YelowComplete_13: 933828142
+      Player-YelowComplete_11WalkSD_3: 1668682408
+      Player-YelowComplete_12WalkD_2: 611496283
+      Player-YelowComplete_13WalkWD_2: 933828142
       Player-YelowComplete_14WalkS_2: -487316300
-      Player-YelowComplete_1WalkD_0: -1636764852
-      Player-YelowComplete_2: -1421490728
-      Player-YelowComplete_3: 1085085099
+      Player-YelowComplete_1WalkSD_0: -1636764852
+      Player-YelowComplete_2WalkD_0: -1421490728
+      Player-YelowComplete_3WalkWD_0: 1085085099
       Player-YelowComplete_4WalkW_0: -795692686
       Player-YelowComplete_5WalkS_1: -1216811653
-      Player-YelowComplete_6WalkD_1: 2096415948
-      Player-YelowComplete_7: 1326583002
-      Player-YelowComplete_8: 1136295209
+      Player-YelowComplete_6WalkSD_1: 2096415948
+      Player-YelowComplete_7WalkD_1: 1326583002
+      Player-YelowComplete_8WalkWD_1: 1136295209
       Player-YelowComplete_9WalkS_1: -10921096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

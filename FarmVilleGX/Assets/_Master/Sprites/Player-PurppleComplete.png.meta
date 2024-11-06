@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_1WalkD_0
+      name: Player-PurppleComplete_1WalkSD_0
       rect:
         serializedVersion: 2
         x: 16
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_2
+      name: Player-PurppleComplete_2WalkD_0
       rect:
         serializedVersion: 2
         x: 32
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_3
+      name: Player-PurppleComplete_3WalkWD_0
       rect:
         serializedVersion: 2
         x: 48
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_6WalkD_1
+      name: Player-PurppleComplete_6WalkSD_1
       rect:
         serializedVersion: 2
         x: 16
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_7
+      name: Player-PurppleComplete_7WalkD_1
       rect:
         serializedVersion: 2
         x: 32
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_8
+      name: Player-PurppleComplete_8WalkWD_1
       rect:
         serializedVersion: 2
         x: 48
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_11WalkD_2
+      name: Player-PurppleComplete_11WalkSD_2
       rect:
         serializedVersion: 2
         x: 16
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_12
+      name: Player-PurppleComplete_12WalkD_2
       rect:
         serializedVersion: 2
         x: 32
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PurppleComplete_13
+      name: Player-PurppleComplete_13WalkWD_1
       rect:
         serializedVersion: 2
         x: 48
@@ -450,18 +450,18 @@ TextureImporter:
     nameFileIdTable:
       Player-PurppleComplete_0WalkS_0: 1519681684
       Player-PurppleComplete_10WalkS_2: 1033519261
-      Player-PurppleComplete_11WalkD_2: 361962804
-      Player-PurppleComplete_12: 373473779
-      Player-PurppleComplete_13: -1893388256
+      Player-PurppleComplete_11WalkSD_2: 361962804
+      Player-PurppleComplete_12WalkD_2: 373473779
+      Player-PurppleComplete_13WalkWD_1: -1893388256
       Player-PurppleComplete_14WalkW_2: -1532081969
-      Player-PurppleComplete_1WalkD_0: 1992766172
-      Player-PurppleComplete_2: 1958753146
-      Player-PurppleComplete_3: -749911686
+      Player-PurppleComplete_1WalkSD_0: 1992766172
+      Player-PurppleComplete_2WalkD_0: 1958753146
+      Player-PurppleComplete_3WalkWD_0: -749911686
       Player-PurppleComplete_4WalkW_0: -1748226734
       Player-PurppleComplete_5WalkS_1: -1393041396
-      Player-PurppleComplete_6WalkD_1: -114584257
-      Player-PurppleComplete_7: -747942579
-      Player-PurppleComplete_8: 5566685
+      Player-PurppleComplete_6WalkSD_1: -114584257
+      Player-PurppleComplete_7WalkD_1: -747942579
+      Player-PurppleComplete_8WalkWD_1: 5566685
       Player-PurppleComplete_9WalkW_1: 1270923553
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -7,18 +7,25 @@ public class PlayerMovement : MonoBehaviour
     new Rigidbody2D rigidbody2D;
 
     public float speed = 32;
-    // Start is called before the first frame update
+    
+    private Animator animator;
+    public float animatorSpeed;
+    public float verticalAnimatorSpeed;
+    public float horizontalAnimatorSpeed;
+    public Sprite sprite;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<Sprite>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         float hor = Input.GetAxisRaw("Horizontal");
         float ver = Input.GetAxisRaw("Vertical");
-
+        
 
         if (hor != 0 || ver != 0)
         {
@@ -26,10 +33,30 @@ public class PlayerMovement : MonoBehaviour
 
             rigidbody2D.velocity = velocity;
 
+            
+            horizontalAnimatorSpeed = Mathf.Abs(rigidbody2D.velocity.x);
+            verticalAnimatorSpeed = Mathf.Abs(rigidbody2D.velocity.y);
+
+            
+            animator.SetFloat("Horizontal", hor);
+            animator.SetFloat("Vertical", ver);
+
         }
         else
         {
             rigidbody2D.velocity = Vector2.zero;
+            hor = 0f;
+            ver = 0f;
+
+            animator.SetFloat("Horizontal", hor);
+            animator.SetFloat("Vertical", ver);
+
+
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 }

@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_1WalkD_0
+      name: Player-PinkComplete_1WalkSD_0
       rect:
         serializedVersion: 2
         x: 16
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_2
+      name: Player-PinkComplete_2WalkD_0
       rect:
         serializedVersion: 2
         x: 32
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_3
+      name: Player-PinkComplete_3WalkSD_0
       rect:
         serializedVersion: 2
         x: 48
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_6WalkD_1
+      name: Player-PinkComplete_6WalkSD_1
       rect:
         serializedVersion: 2
         x: 16
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_7
+      name: Player-PinkComplete_7WalkD_1
       rect:
         serializedVersion: 2
         x: 32
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_8
+      name: Player-PinkComplete_8WalkSD_1
       rect:
         serializedVersion: 2
         x: 48
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_11WalkD_2
+      name: Player-PinkComplete_11WalkSD_2
       rect:
         serializedVersion: 2
         x: 16
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_12
+      name: Player-PinkComplete_12WalkD_2
       rect:
         serializedVersion: 2
         x: 32
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-PinkComplete_13
+      name: Player-PinkComplete_13WalkSD_2
       rect:
         serializedVersion: 2
         x: 48
@@ -450,18 +450,18 @@ TextureImporter:
     nameFileIdTable:
       Player-PinkComplete_0WalkS_0: 605885759
       Player-PinkComplete_10WalkS_2: -2039452414
-      Player-PinkComplete_11WalkD_2: -350865799
-      Player-PinkComplete_12: -711531184
-      Player-PinkComplete_13: -1726602267
+      Player-PinkComplete_11WalkSD_2: -350865799
+      Player-PinkComplete_12WalkD_2: -711531184
+      Player-PinkComplete_13WalkSD_2: -1726602267
       Player-PinkComplete_14WalkW_2: 1439837355
-      Player-PinkComplete_1WalkD_0: 1730191936
-      Player-PinkComplete_2: -1841477223
-      Player-PinkComplete_3: -313105394
+      Player-PinkComplete_1WalkSD_0: 1730191936
+      Player-PinkComplete_2WalkD_0: -1841477223
+      Player-PinkComplete_3WalkSD_0: -313105394
       Player-PinkComplete_4WalkW_0: -696028405
       Player-PinkComplete_5WalkS_1: 1553912613
-      Player-PinkComplete_6WalkD_1: 1072274548
-      Player-PinkComplete_7: 972928505
-      Player-PinkComplete_8: 439067973
+      Player-PinkComplete_6WalkSD_1: 1072274548
+      Player-PinkComplete_7WalkD_1: 972928505
+      Player-PinkComplete_8WalkSD_1: 439067973
       Player-PinkComplete_9WalkW_1: -1258039946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
