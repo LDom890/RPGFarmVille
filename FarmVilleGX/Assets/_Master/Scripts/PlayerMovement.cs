@@ -12,12 +12,12 @@ public class PlayerMovement : MonoBehaviour
     public float animatorSpeed;
     public float verticalAnimatorSpeed;
     public float horizontalAnimatorSpeed;
-    public Sprite sprite;
+    //public Sprite sprite;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        sprite = GetComponent<Sprite>();
+        //sprite = GetComponent<Sprite>();
     }
 
     
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            //GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 }
