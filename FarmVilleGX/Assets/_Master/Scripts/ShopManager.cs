@@ -3,7 +3,7 @@ using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-    public Canvas shopCanvas; // Arrastra el Canvas aquí en el Inspector
+    public Canvas shopCanvas; 
 
     private bool shopQuestionActive = false;
 
@@ -18,6 +18,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private GameObject questionPanel;
     [SerializeField] private GameObject buyPanel;
     [SerializeField] private GameObject sellPanel;
+    [SerializeField] private GameObject ButtonPanel;
     public GameObject panelSellOutfit1;
     public GameObject panelSellOutfit2;
     public GameObject panelSellOutfit3;
@@ -40,6 +41,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         shopCanvas.enabled = false;
+        ButtonPanel.SetActive(false);
         panelOutfit1.SetActive(false);
         panelOutfit2.SetActive(false);
         panelOutfit3.SetActive(false);
@@ -62,7 +64,7 @@ public class ShopManager : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !shopQuestionActive)
         {
-            ShowShop();
+            ButtonPanel.SetActive(true);
             shopQuestionActive = true;
         }
     }
@@ -72,11 +74,11 @@ public class ShopManager : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             shopQuestionActive = false;
+            ButtonPanel.SetActive(false);
         }
     }
 
-
-    private void ShowShop()
+    public void ShowShop()
     {
         shopCanvas.enabled = true; 
         Time.timeScale = 0f; 
@@ -84,8 +86,8 @@ public class ShopManager : MonoBehaviour
 
     public void HideShop()
     {
-        shopCanvas.enabled = false; // Desactiva el render del Canvas
-        Time.timeScale = 1f; // Restaura el tiempo
+        shopCanvas.enabled = false; 
+        Time.timeScale = 1f; 
     }
 
     public void ShowBuyPanel()
@@ -257,11 +259,8 @@ public class ShopManager : MonoBehaviour
     public void PlayerSelectDefaultOutfit()
     {
         playerAppearance.ChangeOutfit(default);
-        panelOutfit4.SetActive(true);
-        inventoryManager.AddItem("Outfit4");
+        inventoryManager.AddItem("DefaultOutfit");
         cameraManager.CheckPlayer();
-        panelSellOutfit4.SetActive(false);
-        panelOwnedOutfit4.SetActive(false);
 
     }
 }

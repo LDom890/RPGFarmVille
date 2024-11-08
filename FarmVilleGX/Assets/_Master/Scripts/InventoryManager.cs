@@ -8,13 +8,16 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI inventoryText; 
     private List<string> items = new List<string>();
 
-    [SerializeField] private GameObject InventoryPanel;
+    [SerializeField] private GameObject inventoryPanel;
 
+    [SerializeField] private GameObject buttonCanvas;
+    private bool inventoryActivate = false;
 
 
     private void Start()
     {
-        InventoryPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
+        buttonCanvas.SetActive(false);
     }
     public void AddItem(string itemName)
     {
@@ -41,15 +44,31 @@ public class InventoryManager : MonoBehaviour
             inventoryText.text += item + "\n";
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !inventoryActivate)
+        {
+            buttonCanvas.SetActive(true);
+            inventoryActivate = true;
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            inventoryActivate = false;
+            buttonCanvas.SetActive(false);
+        }
+    }
     public void ShowInventory()
     {
-        InventoryPanel.SetActive(true);
+        inventoryPanel.SetActive(true);
         Time.timeScale = 0f;
     }
     public void ReturnInventory()
     {
-        InventoryPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 }
