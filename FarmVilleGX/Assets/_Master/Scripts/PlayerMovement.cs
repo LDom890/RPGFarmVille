@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public float animatorSpeed;
     public float verticalAnimatorSpeed;
     public float horizontalAnimatorSpeed;
+
+    [SerializeField] private GameObject axe;
+
+
+
     //public Sprite sprite;
     void Start()
     {
@@ -50,13 +56,21 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetFloat("Horizontal", hor);
             animator.SetFloat("Vertical", ver);
-
-
         }
 
-        if (Input.GetKey(KeyCode.A))
+
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            //GetComponent<SpriteRenderer>().flipX = true;
+            axe.SetActive(true);
+            //animator.Play(attackAnimName, 0, 0);
+            //animator.speed = 1;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            //animator.speed = 0;
+            axe.SetActive(false);
+
         }
     }
 }

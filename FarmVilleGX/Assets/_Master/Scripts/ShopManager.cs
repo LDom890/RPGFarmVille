@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
+using System.Collections;
 
 public class ShopManager : MonoBehaviour
 {
@@ -19,13 +21,16 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private GameObject buyPanel;
     [SerializeField] private GameObject sellPanel;
     [SerializeField] private GameObject ButtonPanel;
+    [SerializeField] private GameObject insufficientFunds;
     public GameObject panelSellOutfit1;
     public GameObject panelSellOutfit2;
     public GameObject panelSellOutfit3;
     public GameObject panelSellOutfit4;
 
     private int playerCoins = 0;
-    [SerializeField] private TextMeshProUGUI playerCoinsText;
+    public int playerWood = 0;
+
+    public TextMeshProUGUI playerCoinsText;
 
     public GameObject panelOwnedOutfit1;
     public GameObject panelOwnedOutfit2;
@@ -57,6 +62,7 @@ public class ShopManager : MonoBehaviour
         panelOwnedOutfit3.SetActive(true);
         panelOwnedOutfit4.SetActive(true);
         defaultOutfit.SetActive(false);
+        insufficientFunds.SetActive(false);
 
     }
 
@@ -114,59 +120,76 @@ public class ShopManager : MonoBehaviour
 
     public void BuyOutfit1()
     {
-        //if(playerCoins >= 500)
-        playerAppearance.ChangeOutfit(1);
-        panelOutfit1.SetActive(true);
-        inventoryManager.AddItem("Outfit1");
-        cameraManager.CheckPlayer();
-        panelSellOutfit1.SetActive(false);
-        panelOwnedOutfit1.SetActive(false);
-
+        if(playerCoins >= 500)
+        {
+            playerAppearance.ChangeOutfit(1);
+            panelOutfit1.SetActive(true);
+            inventoryManager.AddItem("Outfit1");
+            cameraManager.CheckPlayer();
+            panelSellOutfit1.SetActive(false);
+            panelOwnedOutfit1.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(ToggleInsufficientFunds());
+        }
     }
 
     public void BuyOutfit2()
     {
-        //if (playerCoins >= 1000)
-        playerAppearance.ChangeOutfit(2);
-        panelOutfit2.SetActive(true);
-        inventoryManager.AddItem("Outfit2");
-        cameraManager.CheckPlayer();
-        panelSellOutfit2.SetActive(false);
-        panelOwnedOutfit2.SetActive(false);
-
+        if (playerCoins >= 1000)
+        {
+            playerAppearance.ChangeOutfit(2);
+            panelOutfit2.SetActive(true);
+            inventoryManager.AddItem("Outfit2");
+            cameraManager.CheckPlayer();
+            panelSellOutfit2.SetActive(false);
+            panelOwnedOutfit2.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(ToggleInsufficientFunds());
+        }
 
     }
 
     public void BuyOutfit3()
     {
-        //if (playerCoins >= 1500)
-        playerAppearance.ChangeOutfit(3);
-        panelOutfit3.SetActive(true);
-        inventoryManager.AddItem("Outfit3");
-        cameraManager.CheckPlayer();
-        panelSellOutfit3.SetActive(false);
-        panelOwnedOutfit3.SetActive(false);
-
+        if (playerCoins >= 1500)
+        {
+            playerAppearance.ChangeOutfit(3);
+            panelOutfit3.SetActive(true);
+            inventoryManager.AddItem("Outfit3");
+            cameraManager.CheckPlayer();
+            panelSellOutfit3.SetActive(false);
+            panelOwnedOutfit3.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(ToggleInsufficientFunds());
+        }
 
     }
 
     public void BuyOutfit4()
     {
-        //if (playerCoins >= 2000)
-        playerAppearance.ChangeOutfit(4);
-        panelOutfit4.SetActive(true);
-        inventoryManager.AddItem("Outfit4");
-        cameraManager.CheckPlayer();
-        panelSellOutfit4.SetActive(false);
-        panelOwnedOutfit4.SetActive(false);
-
+        if (playerCoins >= 2000)
+        {
+            playerAppearance.ChangeOutfit(4);
+            panelOutfit4.SetActive(true);
+            inventoryManager.AddItem("Outfit4");
+            cameraManager.CheckPlayer();
+            panelSellOutfit4.SetActive(false);
+            panelOwnedOutfit4.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(ToggleInsufficientFunds());
+        }
 
     }
 
-    public void UpdateCanvas()
-    {
-        playerCoinsText.text = playerCoins.ToString();
-    }
+    
     public void SellOutfit1()
     {
         playerAppearance.ChangeOutfit(default);
@@ -175,6 +198,9 @@ public class ShopManager : MonoBehaviour
         cameraManager.CheckPlayer();
         panelSellOutfit1.SetActive(true);
         panelOwnedOutfit1.SetActive(true);
+        playerCoins += 250;
+        UpdateCoinDisplay();
+
 
 
     }
@@ -187,6 +213,9 @@ public class ShopManager : MonoBehaviour
         cameraManager.CheckPlayer();
         panelSellOutfit2.SetActive(true);
         panelOwnedOutfit2.SetActive(true);
+        playerCoins += 500;
+        UpdateCoinDisplay();
+
 
 
     }
@@ -198,6 +227,9 @@ public class ShopManager : MonoBehaviour
         cameraManager.CheckPlayer();
         panelSellOutfit3.SetActive(true);
         panelOwnedOutfit3.SetActive(true);
+        playerCoins += 750;
+        UpdateCoinDisplay();
+
 
     }
     public void SellOutfit4()
@@ -208,6 +240,8 @@ public class ShopManager : MonoBehaviour
         cameraManager.CheckPlayer();
         panelSellOutfit4.SetActive(true);
         panelOwnedOutfit4.SetActive(true);
+        playerCoins += 1000;
+        UpdateCoinDisplay();
 
     }
 
@@ -262,5 +296,31 @@ public class ShopManager : MonoBehaviour
         inventoryManager.AddItem("DefaultOutfit");
         cameraManager.CheckPlayer();
 
+    }
+
+    public void AddCoins()
+    {
+        playerCoins += 100;
+        UpdateCoinDisplay();
+    }
+
+    
+    private void UpdateCoinDisplay()
+    {
+        if (playerCoinsText != null)
+        {
+            playerCoinsText.text = "Coins " + playerCoins;
+        }
+        else
+        {
+            Debug.LogWarning("TextMeshProUGUI coinText no asignado en el inspector.");
+        }
+    }
+
+    private IEnumerator ToggleInsufficientFunds()
+    {
+        insufficientFunds.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        insufficientFunds.SetActive(false); 
     }
 }
