@@ -122,6 +122,7 @@ public class ShopManager : MonoBehaviour
     {
         if(playerCoins >= 500)
         {
+            playerCoins -= 500;
             playerAppearance.ChangeOutfit(1);
             panelOutfit1.SetActive(true);
             inventoryManager.AddItem("Outfit1");
@@ -139,6 +140,7 @@ public class ShopManager : MonoBehaviour
     {
         if (playerCoins >= 1000)
         {
+            playerCoins -= 1000;
             playerAppearance.ChangeOutfit(2);
             panelOutfit2.SetActive(true);
             inventoryManager.AddItem("Outfit2");
@@ -157,6 +159,7 @@ public class ShopManager : MonoBehaviour
     {
         if (playerCoins >= 1500)
         {
+            playerCoins -= 1500;
             playerAppearance.ChangeOutfit(3);
             panelOutfit3.SetActive(true);
             inventoryManager.AddItem("Outfit3");
@@ -175,6 +178,7 @@ public class ShopManager : MonoBehaviour
     {
         if (playerCoins >= 2000)
         {
+            playerCoins -= 2000;
             playerAppearance.ChangeOutfit(4);
             panelOutfit4.SetActive(true);
             inventoryManager.AddItem("Outfit4");
